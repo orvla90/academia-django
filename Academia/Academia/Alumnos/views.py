@@ -1,5 +1,6 @@
+from typing import List
 from django.shortcuts import render
-from .models import ListadoAlumnos
+from .models import Alumnos
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.http import Http404
@@ -10,5 +11,6 @@ def Home(request):
     return render(request, 'alumnos/home.html')
 
 class ListadoAlumnos(ListView):
-    model = ListadoAlumnos
+    model = Alumnos
     template_name = "alumnos/listado_alumnos.html"
+
