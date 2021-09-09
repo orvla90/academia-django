@@ -1,4 +1,7 @@
 from django.db import models
+from django.urls import reverse
+
+#from Pagos import models as pagosmodels
 
 # Create your models here.
 class Padres(models.Model):
@@ -8,6 +11,10 @@ class Padres(models.Model):
     telefono = models.CharField(max_length=30)
     dni = models.CharField(max_length=12)
     mail = models.CharField(max_length=100)
-    #pagos = models.ForeignKey('Pagos.models.Pagos', on_delete=CASCADE)
+    #pagos = models.ForeignKey(pagosmodels.Pagos, on_delete=CASCADE, null=True)
+    
+    def __str__(self):
+        return f"{self.nombre} {self.apellidos}"
+    
 
 

@@ -1,9 +1,19 @@
-<!DOCTYPE html>
-<html>
-    <head>
+{% extends 'academia/base.html' %}
 
-    </head>
-    <body>
-        <h1>Listado de padres</h1>
-    </body>
-</html>
+{% block content %}
+<h1>Listado de padres</h1>
+<table>
+    {% for padre in object_list %}
+    <tr>
+        <td>{{ padre.id }}</td>
+        <td>{{ padre.nombre }}</td>
+        <td>{{ padre.apellidos }}</td>
+        <td>{{ padre.dni }}</td>
+        <td>{{ padre.telefono }}</td>
+        <td>{{ padre.mail }}</td>
+        <td><a href="{% url 'editarpadre' padre.id %}">Editar</a></td>
+        <td><a href="{% url 'eliminarpadre' padre.id %}">Eliminar</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

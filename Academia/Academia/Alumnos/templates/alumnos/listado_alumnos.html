@@ -5,5 +5,18 @@
     </head>
     <body>
         <h1>Listado de Alumnos</h1>
+        <table>
+            {% for alumno in object_list %}
+            <tr>
+                <td>{{ alumno.curso }}</td>
+                <td>{{ alumno.nombre }}</td>
+                <td>{{ alumno.apellidos }}</td>
+                <td>{{ alumno.padre.nombre }}</td>
+                <td>{{ alumno.padre.apellidos }}</td>
+                <td><a href="{% url 'editaralumno' alumno.id %}">Editar</a></td>
+                <td><a href="{% url 'eliminaralumno' alumno.id %}">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </table>
     </body>
 </html>
