@@ -25,6 +25,7 @@ class EditarAlumno(UpdateView):
     model = Alumnos
     template_name = 'alumnos/editaralumno.html'
     fields = ['nombre', 'apellidos', 'curso', 'padre', 'telefono', 'mail', 'profesor']
+    success_url = reverse_lazy('listadoalumnos')
 
 class EliminarAlumno(DeleteView):
     model = Alumnos

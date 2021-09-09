@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Libera-T</title>
-    </head>
-    <body>
-        <h1>Bienvenido</h1>
-    </body>
-</html>
+{% extends 'academia/base.html' %}
+{% block content %}
+
+<h1>Seccion Alumno</h1>
+<p>Bienvenido a la parte de gestion de los alumnos</p>
+<a href="{% url 'listadoalumnos' %}">Listado de Alumnos</a>
+
+
+{% endblock %}

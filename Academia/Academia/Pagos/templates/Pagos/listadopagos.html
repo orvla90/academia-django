@@ -1,0 +1,16 @@
+{% extends 'academia/base.html' %}
+{% block content %}
+
+<h1>Listado de Pagos</h1>
+<table>
+    {% for pago in object_list %}
+    <tr>
+        <td>{{ pago.id }}</td>
+        <td>{{ pago.fecha }}</td>
+        <td>{{ pago.padre }}</td>
+        <td>{{ pago.cantidad }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

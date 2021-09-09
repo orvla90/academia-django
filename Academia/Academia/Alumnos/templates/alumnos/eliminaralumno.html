@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-
-    </head>
-    <body>
-        <h1>Crear</h1>
-        <form method="post">
-            <div>
-              {% csrf_token %}
-              <p>Seguro que desea eliminar a {{ object.nombre }} {{ object.apellidos }}</p>
-              <input type="submit" value="eliminar" />
-            </div>
-            </form>
-    </body>
-</html>
+{% extends 'academia/base.html' %}
+{% block content %}
+<h1>Crear</h1>
+<form method="post">
+  <div>
+    {% csrf_token %}
+    <p>Seguro que desea eliminar a {{ object.nombre }} {{ object.apellidos }}</p>
+    <input type="submit" value="eliminar" />
+  </div>
+</form>
+{% endblock %}
