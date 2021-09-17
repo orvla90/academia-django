@@ -5,10 +5,9 @@
     {% for alumno in object_list %}
     <tr>
         <td>{{ alumno.curso }}</td>
-        <td>{{ alumno.nombre }}</td>
-        <td>{{ alumno.apellidos }}</td>
-        <td>{{ alumno.padre }}</td>
-        <td>{{ alumno.profesor }}</td>
+        <td>{{ alumno }}</td>
+        <td><a href="{% url 'editarpadre' alumno.padre.id %}">{{ alumno.padre }}</a></td>
+        <td><a href="{% url 'editarprofesor' alumno.profesor.id %}">{{ alumno.profesor }}</a></td>
         <td>{{ alumno.telefono }}</td>
         <td>{{ alumno.mail }}</td>
         <td><a href="{% url 'editaralumno' alumno.id %}">Editar</a></td>

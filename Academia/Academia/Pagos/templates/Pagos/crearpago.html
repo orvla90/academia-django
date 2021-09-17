@@ -1,13 +1,15 @@
 {% extends 'academia/base.html' %}
 
-{% block title %} Editar Alumno {% endblock %}
+{% block title %} Crear Pago {% endblock %}
 
 {% block content %}
-<h1>Editar</h1>
+
+<h1>Crear Pago</h1>
 <form method="post">
   <div>
     {% csrf_token %} {{ form.as_p }}
-    <input type="submit" value="Editar" />
+    <input type="submit" value="Crear" />
   </div>
 </form>
+
 {% endblock %}

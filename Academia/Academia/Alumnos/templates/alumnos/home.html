@@ -1,9 +1,21 @@
 {% extends 'academia/base.html' %}
+{% block title %}
+Centro de estudio
+{% endblock %}
 {% block content %}
 
-<h1>Seccion Alumno</h1>
-<p>Bienvenido a la parte de gestion de los alumnos</p>
+<h1>Alumnos</h1>
+<p>Gestion de los alumnos</p>
 <a href="{% url 'listadoalumnos' %}">Listado de Alumnos</a>
+<a href="{% url 'crearalumno' %}">Crear un alumno</a>
 
+<h1>Profesores</h1>
+<p>Gestion de los profesores</p>
+<a href="{% url 'listadoprofesores' %}">Listado de profesotes</a>
+<a href="{% url 'crearprofesor' %}">Crear un profesor</a>
 
+<h1>Pagos</h1>
+<p>Gestion de los pagos</p>
+<a href="{% url 'listadopagos' %}">Listado de pagos</a>
+<a href="{% url 'crearpago' %}">Crear Pago</a>
 {% endblock %}

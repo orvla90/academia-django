@@ -1,0 +1,16 @@
+{% extends 'academia/base.html' %}
+{% block title %}Datos {{ object }}{% endblock %}
+
+{% block content %}
+
+<h1>Datos:</h1>
+<p>{{ padre.id }}</p>
+<p>{{ padre.nombre }}</p>
+<p>{{ padre.apellidos }}</p>
+<p>{{ padre.dni }}</p>
+<p>{{ padre.telefono }}</p>
+<p>{{ padre.mail }}</p>
+<p><a href="{% url 'editarpadre' padre.id %}">Editar</a></p>
+<p><a href="{% url 'eliminarpadre' padre.id %}">Eliminar</a></p>
+
+{% endblock %}
