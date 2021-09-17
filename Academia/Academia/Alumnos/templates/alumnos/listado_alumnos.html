@@ -2,6 +2,16 @@
 {% block content %}
 <h1>Listado de Alumnos</h1>
 <table>
+    <thead>
+        <td>CURSO</td>
+        <td>ALUMNO</td>
+        <td>PADRE</td>
+        <td>PROFESOR</td>
+        <td>TELEFONO</td>
+        <td>MAIL</td>
+        <td></td>
+        <td></td>
+    </thead>
     {% for alumno in object_list %}
     <tr>
         <td>{{ alumno.curso }}</td>

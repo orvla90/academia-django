@@ -28,6 +28,7 @@ class Alumnos(models.Model):
     profesor = models.ForeignKey(profesoresmodels.Profesores, default=1, on_delete=CASCADE)
     telefono = models.CharField(max_length=100, default='')
     mail = models.CharField(max_length=100, default='')
+    fechaInscripcion = models.DateField(default=datetime.date.today())
 
     def __str__(self):
         return f"{ self.nombre } { self.apellidos }"

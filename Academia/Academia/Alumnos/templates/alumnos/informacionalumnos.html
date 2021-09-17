@@ -1,0 +1,21 @@
+{% extends 'academia/base.html' %}
+{% load static %}
+{% block title %}Información Alumnos{% endblock %}
+
+{% block content %}
+
+<h1>Información general de los alumnos</h1>
+<p>Actualmente hay un total de {{ totalalumnos }} alumnos</p>
+
+{% for curso in cursos %}
+<p>{{ curso.curso }} tiene un total de {{ curso.entries }} alumnos representando un {{ curso.porcentaje }}%</p>
+{% endfor %}
+
+<button><a href="{% url 'listadoalumnos' %}">Ver listado de Alumnos</a></button>
+<button><a href="{% url 'crearalumno' %}">Crear un nuevo Alumno</a></button>
+{% if totalalumnos > 0 %}
+<img src="{% static 'img/piechart.png' %}" alt="piechart">
+{% else %}
+<p>No hay datos para hacer un grafico de los alumnos</p>
+{% endif %}
+{% endblock %}

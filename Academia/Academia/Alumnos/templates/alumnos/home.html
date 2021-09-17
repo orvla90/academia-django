@@ -5,9 +5,14 @@ Centro de estudio
 {% block content %}
 
 <h1>Alumnos</h1>
-<p>Gestion de los alumnos</p>
+<p><a href="{% url 'informacionalumnos' %}">Gestion de los alumnos</a></p>
 <a href="{% url 'listadoalumnos' %}">Listado de Alumnos</a>
 <a href="{% url 'crearalumno' %}">Crear un alumno</a>
+
+<h1>Padres</h1>
+<p>Gestion de los Padres</p>
+<a href="{% url 'listadopadres' %}">Listado de padres</a>
+<a href="{% url 'crearpadre' %}">Crear un padre</a>
 
 <h1>Profesores</h1>
 <p>Gestion de los profesores</p>
