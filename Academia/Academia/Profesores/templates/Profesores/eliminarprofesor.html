@@ -1,13 +1,15 @@
 {% extends 'academia/base.html' %}
 {% block content %}
+<div>
+    <h1>Crear Profesor</h1>
+    <form method="post">
+        <div>
+            {% csrf_token %}
+            <p>Desea eliminar a {{ object.nombre }} {{ object.apellidos }}</p>
+            <input type="submit" value="eliminar" />
+        </div>
+    </form>
+</div>
 
-<h1>Crear Profesor</h1>
-<form method="post">
-    <div>
-        {% csrf_token %}
-        <p>Desea eliminar a {{ object.nombre }} {{ object.apellidos }}</p>
-        <input type="submit" value="eliminar" />
-    </div>
-</form>
 
 {% endblock %}

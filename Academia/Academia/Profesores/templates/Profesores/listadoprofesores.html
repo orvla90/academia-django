@@ -1,20 +1,22 @@
 {% extends 'academia/base.html' %}
 {% block content %}
+<div>
+    <h1>Listado Profesores</h1>
+    <table>
+        {% for profesor in object_list %}
+        <tr>
+            <td>{{ profesor.id }}</td>
+            <td>{{ profesor.nombre }}</td>
+            <td>{{ profesor.apellidos }}</td>
+            <td>{{ profesor.dni }}</td>
+            <td>{{ profesor.telefono }}</td>
+            <td>{{ profesor.mail }}</td>
+            <td><a href="{% url 'editarprofesor' profesor.id %}">Editar</a></td>
+            <td><a href="{% url 'eliminarprofesor' profesor.id %}">Eliminar</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
 
-<h1>Listado Profesores</h1>
-<table>
-    {% for profesor in object_list %}
-    <tr>
-        <td>{{ profesor.id }}</td>
-        <td>{{ profesor.nombre }}</td>
-        <td>{{ profesor.apellidos }}</td>
-        <td>{{ profesor.dni }}</td>
-        <td>{{ profesor.telefono }}</td>
-        <td>{{ profesor.mail }}</td>
-        <td><a href="{% url 'editarprofesor' profesor.id %}">Editar</a></td>
-        <td><a href="{% url 'eliminarprofesor' profesor.id %}">Eliminar</a></td>
-    </tr>
-    {% endfor %}
-</table>
 
 {% endblock %}

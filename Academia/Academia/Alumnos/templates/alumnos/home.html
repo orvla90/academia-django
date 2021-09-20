@@ -3,24 +3,53 @@
 Centro de estudio
 {% endblock %}
 {% block content %}
+<div>
+    <h1>Alumnos</h1>
+    <p><a href="{% url 'informacionalumnos' %}">Gestion de los alumnos</a></p>
+    <p>
+        <a href="{% url 'listadoalumnos' %}">Listado de Alumnos</a>
+    </p>
+    <p>
+        <a href="{% url 'crearalumno' %}">Crear un alumno</a>
+    </p>
+</div>
 
-<h1>Alumnos</h1>
-<p><a href="{% url 'informacionalumnos' %}">Gestion de los alumnos</a></p>
-<a href="{% url 'listadoalumnos' %}">Listado de Alumnos</a>
-<a href="{% url 'crearalumno' %}">Crear un alumno</a>
+<div>
+    <h1>Padres</h1>
+    <p>Gestion de los Padres</p>
+    <p>
+        <a href="{% url 'listadopadres' %}">Listado de padres</a>
+    </p>
+    <p>
+        <a href="{% url 'crearpadre' %}">Apuntar un padre</a>
+    </p>
+</div>
 
-<h1>Padres</h1>
-<p>Gestion de los Padres</p>
-<a href="{% url 'listadopadres' %}">Listado de padres</a>
-<a href="{% url 'crearpadre' %}">Crear un padre</a>
+<div>
+    <h1>Profesores</h1>
+    <p>Gestion de los profesores</p>
+    <p>
+        <a href="{% url 'listadoprofesores' %}">Listado de profesores</a>
+    </p>
+    <p>
+        <a href="{% url 'crearprofesor' %}">Apuntar un profesor</a>
+    </p>
+</div>
 
-<h1>Profesores</h1>
-<p>Gestion de los profesores</p>
-<a href="{% url 'listadoprofesores' %}">Listado de profesotes</a>
-<a href="{% url 'crearprofesor' %}">Crear un profesor</a>
+<div>
+    <h1>Pagos</h1>
+    <p>Gestion de los pagos</p>
+    <p>
+        <a href="{% url 'listadopagos' %}">Listado de pagos</a>
+    </p>
+    <p>
+        <a href="{% url 'crearpago' %}">Apuntar Pago</a>
+    </p>
+</div>
 
-<h1>Pagos</h1>
-<p>Gestion de los pagos</p>
-<a href="{% url 'listadopagos' %}">Listado de pagos</a>
-<a href="{% url 'crearpago' %}">Crear Pago</a>
+<div>
+    <h1>Asistencia</h1>
+    <p><a href="{% url 'asistenciaHome' %}">Asistencia de los alumnos</a></p>
+    <p><a href="{% url 'crearasistencia' %}">Apuntar asistencia</a></p>
+</div>
 {% endblock %}

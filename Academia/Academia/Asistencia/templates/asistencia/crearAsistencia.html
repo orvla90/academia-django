@@ -2,11 +2,14 @@
 {% block title %}Apuntar Asistencia{% endblock %}
 
 {% block content %}
-<h1>Apuntar la Asistencia</h1>
-<form method="post">
-    <div>
-      {% csrf_token %} {{ form.as_p }}
-      <input type="submit" value="Crear" />
-    </div>
-  </form>
+<div>
+  <h1>Apuntar la Asistencia</h1>
+  <form method="post">
+      <div>
+        {% csrf_token %} {{ form.as_p }}
+        <input type="submit" value="Crear" />
+      </div>
+    </form>
+</div>
+
 {% endblock %}

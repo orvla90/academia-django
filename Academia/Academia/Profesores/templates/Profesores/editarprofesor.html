@@ -1,12 +1,14 @@
 {% extends 'academia/base.html' %}
 {% block content %}
+<div>
+    <h1>Editar Profesor</h1>
+    <form method="post">
+        <div>
+            {% csrf_token %} {{ form.as_p }}
+            <input type="submit" value="Editar" />
+        </div>
+    </form>
+</div>
 
-<h1>Editar Profesor</h1>
-<form method="post">
-    <div>
-        {% csrf_token %} {{ form.as_p }}
-        <input type="submit" value="Editar" />
-    </div>
-</form>
 
 {% endblock %}

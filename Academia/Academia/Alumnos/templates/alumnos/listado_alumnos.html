@@ -1,28 +1,31 @@
 {% extends 'academia/base.html' %}
 {% block content %}
-<h1>Listado de Alumnos</h1>
-<table>
-    <thead>
-        <td>CURSO</td>
-        <td>ALUMNO</td>
-        <td>PADRE</td>
-        <td>PROFESOR</td>
-        <td>TELEFONO</td>
-        <td>MAIL</td>
-        <td></td>
-        <td></td>
-    </thead>
-    {% for alumno in object_list %}
-    <tr>
-        <td>{{ alumno.curso }}</td>
-        <td>{{ alumno }}</td>
-        <td><a href="{% url 'editarpadre' alumno.padre.id %}">{{ alumno.padre }}</a></td>
-        <td><a href="{% url 'editarprofesor' alumno.profesor.id %}">{{ alumno.profesor }}</a></td>
-        <td>{{ alumno.telefono }}</td>
-        <td>{{ alumno.mail }}</td>
-        <td><a href="{% url 'editaralumno' alumno.id %}">Editar</a></td>
-        <td><a href="{% url 'eliminaralumno' alumno.id %}">Eliminar</a></td>
-    </tr>
-    {% endfor %}
-</table>
+<div>
+    <h1>Listado de Alumnos</h1>
+    <table>
+        <thead>
+            <th>CURSO</th>
+            <th>ALUMNO</th>
+            <th>PADRE</th>
+            <th>PROFESOR</th>
+            <th>TELEFONO</th>
+            <th>MAIL</th>
+            <th></th>
+            <th></th>
+        </thead>
+        {% for alumno in object_list %}
+        <tr>
+            <td>{{ alumno.curso }}</td>
+            <td>{{ alumno }}</td>
+            <td><a href="{% url 'editarpadre' alumno.padre.id %}">{{ alumno.padre }}</a></td>
+            <td><a href="{% url 'editarprofesor' alumno.profesor.id %}">{{ alumno.profesor }}</a></td>
+            <td>{{ alumno.telefono }}</td>
+            <td>{{ alumno.mail }}</td>
+            <td><a href="{% url 'editaralumno' alumno.id %}">Editar</a></td>
+            <td><a href="{% url 'eliminaralumno' alumno.id %}">Eliminar</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
 {% endblock %}

@@ -2,10 +2,44 @@
 <html>
     <head>
         <title>Libera-T | {% block title %}{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/academia/style.css' %}">
+        {% load bootstrap4 %}
+        {% bootstrap_css %}
+
     </head>
-    <body>
-        {% block content %}{% endblock %}
+    <body class="text-center bg-light m-0 p-0">
+
+        <div class="cover-container d-flex h-100 m-0 flex-column">
+            <header class="masthead p-3 bg-dark text-white">
+            <div class="inner d-flex justify-content-around">
+                <h3 class="masthead-brand">Libera-T</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="{% url 'home' %}">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Contact</a>
+                </nav>
+            </div>
+            </header>
+    
+            <main role="main" class="inner cover d-flex justify-content-around">
+                {% block content %}{% endblock %}
+            </main>
+    
+            <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p></p>
+            </div>
+            </footer>
+        </div>
+
+        {% bootstrap_javascript jquery='full' %}
     </body>
 </html>
+
+
+
+
+

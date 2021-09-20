@@ -3,11 +3,14 @@
 {% block title %} Editar Pago {% endblock %}
 
 {% block content %}
-<h1>Editar</h1>
-<form method="post">
-  <div>
-    {% csrf_token %} {{ form.as_p }}
-    <input type="submit" value="Editar" />
-  </div>
-</form>
+<div>
+  <h1>Editar</h1>
+  <form method="post">
+    <div>
+      {% csrf_token %} {{ form.as_p }}
+      <input type="submit" value="Editar" />
+    </div>
+  </form>
+</div>
+
 {% endblock %}

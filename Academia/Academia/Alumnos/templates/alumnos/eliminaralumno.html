@@ -2,12 +2,14 @@
 
 {% block title %} Eliminar Alumno {% endblock %}
 {% block content %}
-<h1>Eliminar</h1>
-<form method="post">
-  <div>
-    {% csrf_token %}
-    <p>Seguro que desea eliminar el pago de {{ object }}</p>
-    <input type="submit" value="eliminar" />
-  </div>
-</form>
+<div>
+  <h1>Eliminar</h1>
+  <form method="post">
+    <div>
+      {% csrf_token %}
+      <p>Seguro que desea eliminar el pago de {{ object }}</p>
+      <input type="submit" value="eliminar" />
+    </div>
+  </form>
+</div>
 {% endblock %}
