@@ -1,6 +1,6 @@
 from django.db import models
 from django.db.models.deletion import CASCADE
-import datetime
+from django.utils.timezone import now
 from Padres import models as padresmodels
 from Profesores import models as profesoresmodels
 
@@ -28,7 +28,7 @@ class Alumnos(models.Model):
     profesor = models.ForeignKey(profesoresmodels.Profesores, default=1, on_delete=CASCADE)
     telefono = models.CharField(max_length=100, default='')
     mail = models.CharField(max_length=100, default='')
-    fechaInscripcion = models.DateField(default=datetime.date.today())
+    fechaInscripcion = models.DateField(default=now())
 
     def __str__(self):
         return f"{ self.nombre } { self.apellidos }"

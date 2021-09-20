@@ -38,12 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pandas',
     'matplotlib',
     'Academia',
     'Alumnos',
     'Padres',
     'Profesores',
     'Pagos',
+    'Asistencia',
 ]
 
 MIDDLEWARE = [
@@ -114,13 +116,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EUROPE/PARIS'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

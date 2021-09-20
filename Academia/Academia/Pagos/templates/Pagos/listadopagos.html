@@ -11,6 +11,7 @@
         <td>{{ pago.fecha }}</td>
         <td><a href="{% url 'padre' pago.padre.id %}">{{ pago.padre }}</a></td>
         <td>{{ pago.cantidad }}</td>
+        <td>{{ pago.numeroFactura }}</td>
         <td><a href="{% url 'editarpago' pago.id %}">Editar Pago</a></td>
         <td><a href="{% url 'eliminarpago' pago.id %}">Eliminar Pago</a></td>
     </tr>

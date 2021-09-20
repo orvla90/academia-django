@@ -6,8 +6,6 @@ from django.views.generic import ListView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.http import Http404
 from django.db.models import Count
-import matplotlib
-matplotlib.use('Agg')
 from matplotlib import pyplot as plt
 # Create your views here.
 
